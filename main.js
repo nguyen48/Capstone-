@@ -46,8 +46,8 @@ function drop(event) {
     const draggableElement = document.getElementById(draggableElementData);
     event.target.classList.add("dropped");
     event.target.style.backgroundColor = window.getComputedStyle(draggableElement).color;
-    draggableElement.classList.add("dragged");
-    draggableElement.setAttribute("draggable", "false");
+    // draggableElement.classList.add("dragged");
+    // draggableElement.setAttribute("draggable", "false");
     event.target.insertAdjacentHTML("afterbegin", `<i class="fas fa-${draggableElementData}"></i>`);
   }
 }
