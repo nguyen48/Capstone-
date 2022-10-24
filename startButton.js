@@ -10,13 +10,13 @@ class startButton extends React.Component {
 
   render() {
     if (this.state.started) {
-      return 'Game is starting';
+      return 'Game is starting...';
     }
 
     return e(
       'button',
       { onClick: () => this.setState({ started: true }) },
-      'Waiting for game launch....'
+      'Click here to start!'
     );
   }
 }
