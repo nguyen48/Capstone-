@@ -79,6 +79,50 @@ body {
   opacity: 0.1;
 }
 
+.lineContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  border-top: 1px solid blue;
+  border-right: 1px solid blue;
+  width: 76px;
+  Height: 8px;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.lineRightEnd {
+  border-right: 0;
+}
+
+.numberContainer {
+  position: absolute;
+  top: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.number {
+  width: 22px;
+  float: left;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.numberLeftEnd {
+  width: 10px;
+  Height: 5px;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
 @media (max-width: 600px) {
   html { font-size: 14px; }
   .draggable-elements { margin: 1.5rem; }
