@@ -17,7 +17,7 @@ function dragStart(event) {
   event.dataTransfer.setData("text", event.target.id); }
 
 
-
+ 
 function dragEnter(event) {
   if(!event.target.classList.contains("dropped")) {
     event.target.classList.add("droppable-hover");
@@ -31,9 +31,15 @@ function dragOver(event) {
 }
 
 function dragLeave(event) {
+  event.preventDefault();
   if(!event.target.classList.contains("dropped")) {
     event.target.classList.remove("droppable-hover");
   }
+  else{
+    event.target.classList.remove("dropped");
+    event.target.style.backgroundColor = "white";
+    event.target.removeChild(event.target.firstChild);
+  };
 }
 
 function drop(event) {
@@ -48,6 +54,6 @@ function drop(event) {
     event.target.style.backgroundColor = window.getComputedStyle(draggableElement).color;
     // draggableElement.classList.add("dragged");
     // draggableElement.setAttribute("draggable", "false");
-    event.target.insertAdjacentHTML("afterbegin", `<i class="fas fa-${draggableElementData}"></i>`);
+    event.target.insertAdjacentHTML("afterbegin", `<i class ="fas fa-${draggableElementData} " draggable="true"></i>`);
   }
 }
