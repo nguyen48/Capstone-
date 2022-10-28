@@ -1,6 +1,6 @@
 const draggableElements = document.querySelectorAll(".draggable");
 const droppableElements = document.querySelectorAll(".droppable");
-
+ 
 // for legacy browsers
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioContext = new AudioContext();
