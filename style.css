@@ -24,7 +24,7 @@ body {
 div.high {
   position: absolute;
   font-weight: bold;
-  top: 250px;
+  top: 350px;
   left: 100px;
   width: 200px;
   height: 300px;
@@ -33,7 +33,7 @@ div.high {
 div.low {
   position: absolute;
   font-weight: bold;
-  top: 350px;
+  top: 450px;
   left: 100px;
   width: 200px;
   height: 100px;
