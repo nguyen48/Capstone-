@@ -35,7 +35,7 @@ function dragLeave(event) {
   if(!event.target.classList.contains("dropped")) {
     event.target.classList.remove("droppable-hover");
   }
-  else{
+  else {
     event.target.classList.remove("dropped");
     event.target.style.backgroundColor = "white";
     event.target.removeChild(event.target.firstChild);
