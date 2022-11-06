@@ -1,5 +1,6 @@
 const draggableElements = document.querySelectorAll(".draggable");
 const droppableElements = document.querySelectorAll(".droppable");
+var x = document.getElementById("CapstoneAudio"); 
 
 draggableElements.forEach(elem => {
   elem.addEventListener("dragstart", dragStart); 
@@ -12,12 +13,14 @@ droppableElements.forEach(elem => {
   elem.addEventListener("drop", drop); 
 });
 
+function playAudio() { 
+  x.play(); 
+} 
 
 function dragStart(event) {
   event.dataTransfer.setData("text", event.target.id); }
 
 
- 
 function dragEnter(event) {
   if(!event.target.classList.contains("dropped")) {
     event.target.classList.add("droppable-hover");
