@@ -1,6 +1,8 @@
 const draggableElements = document.querySelectorAll(".draggable");
 const droppableElements = document.querySelectorAll(".droppable");
 var x = document.getElementById("CapstoneAudio"); 
+var y = document.getElementById("CapstoneAudio2"); 
+
 
 draggableElements.forEach(elem => {
   elem.addEventListener("dragstart", dragStart); 
@@ -15,6 +17,10 @@ droppableElements.forEach(elem => {
 
 function playAudio() { 
   x.play(); 
+} 
+
+function playAudio2() { 
+  y.play(); 
 } 
 
 function dragStart(event) {
