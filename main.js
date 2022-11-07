@@ -3,6 +3,13 @@ const droppableElements = document.querySelectorAll(".droppable");
 var x = document.getElementById("CapstoneAudio"); 
 var y = document.getElementById("CapstoneAudio2"); 
 
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
 
 draggableElements.forEach(elem => {
   elem.addEventListener("dragstart", dragStart); 
