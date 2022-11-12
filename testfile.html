@@ -1,104 +1,131 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset=" UTF-8">
-    <meta name = "viewport" content="width=device-width, initial scale = 1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://kit.fontawesome.com/d932b28645.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
+  <meta charset=" UTF-8">
+  <meta name="viewport" content="width=device-width, initial scale = 1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/d932b28645.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a HREF="about.html">About</a>
-  <a href="instruction.html">Instructions</a>
-  <a href="references.html">References</a>
-  <a href="contact.html">Contact</a>
-</div>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a HREF="about.html">About</a>
+    <a href="instruction.html">Instructions</a>
+    <a href="references.html">References</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
-<span style="font-size:20px; float:left; cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+  <span style="font-size:20px; float:left; cursor:pointer" onclick="openNav()">&#9776; Menu</span>
 
-<style>
-#myHeader {
-  background-color: rgb(212, 173, 230);
-  color: black;
-  padding: 10px;
-  text-align: center;
-} 
-</style>
+  <style>
+    #myHeader {
+      background-color: rgb(212, 173, 230);
+      color: black;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
-
-<audio id="CapstoneAudio">
-  <source src="cat.mp3" />
-</audio>
-
-<audio id="CapstoneAudio2">
-  <source src="low.mp3" />
-</audio>
-
-<h1 id="myHeader">Welcome to our webpage!</h1>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
 
 
-<img src="https://media.tenor.com/2roX3uxz_68AAAAM/cat-space.gif"  style="width:100px;left:40px;height:100px;">
+  <audio id="CapstoneAudio">
+    <source src="cat.mp3" />
+  </audio>
 
-<section class="draggable-elements">
-  <i class="fas fa-square draggable" onmousedown="playAudio()" draggable="true" style="color: #ff6384; font-size: 3rem;" id="square1"></i>
-  <i class="fas fa-square draggable" onmousedown="playAudio2()" draggable="true" style="color: #ff63cb; font-size: 3rem;" id="square2"></i>
-</section>
+  <audio id="CapstoneAudio2">
+    <source src="low.mp3" />
+  </audio>
+
+  <h1 id="myHeader">Welcome to our webpage!</h1>
 
 
-<div class="high">High notes:</div>
-<div class="low">Low notes</div>
-<div class="instructions1">Drag the colored boxes into the suitable white boxes</div>
-<div class="instructions2">To reset your choice, simply drag the same colored box into the same area!</div>
+  <img src="https://media.tenor.com/2roX3uxz_68AAAAM/cat-space.gif" style="width:100px;left:40px;height:100px;">
 
-<section class="droppable-elements">
-  <div class="droppable" data-draggable-id="square1"><span>drop here!</div>
-  <div class="droppable" data-draggable-id="square1"><span>drop here!</div>
-  <div class="droppable" data-draggable-id="square1"><span>drop here!</div>
-  <div class="droppable" data-draggable-id="square1"><span>drop here!</div>
-  <div class="droppable" data-draggable-id="square1"><span>drop here!</div>
-  <div class="droppable" data-draggable-id="square1"><span>drop here!</div>
-  <div class="droppable" data-draggable-id="square1"><span>drop here!</div>
-  <div class="droppable" data-draggable-id="square1"><span>drop here!</div>
-  <div class="droppable" data-draggable-id="square1"><span>drop here!</div>
-  <div class="droppable" data-draggable-id="square1"><span>drop here!</div>
-  <div class="droppable" data-draggable-id="square1"><span>drop here!</div>
-  <div class="droppable" data-draggable-id="square1"><span>drop here!</div>
-</section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <div class="instructions1">Drag the colored boxes into the suitable white boxes</div>
+      </div>
+      <div class="col-md-8">
+        <section class="draggable-elements">
+          <i class="fas fa-square draggable" onmousedown="playAudio()" draggable="true"
+            style="color: #ff6384; font-size: 3rem;" id="square1"></i>
+          <i class="fas fa-square draggable" onmousedown="playAudio2()" draggable="true"
+            style="color: #ff63cb; font-size: 3rem;" id="square2"></i>
+        </section>
+      </div>
+      <div class="col-md-2">
+        <div class="instructions2">To reset your choice, simply drag the same colored box into the same area!
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">High notes:</div>
+      <div class="col-md-9">
+        <section class="droppable-elements">
+          <div class="droppable" data-draggable-id="square1"><span>drop here!</div>
+          <div class="droppable" data-draggable-id="square1"><span>drop here!</div>
+          <div class="droppable" data-draggable-id="square1"><span>drop here!</div>
+          <div class="droppable" data-draggable-id="square1"><span>drop here!</div>
+          <div class="droppable" data-draggable-id="square1"><span>drop here!</div>
+          <div class="droppable" data-draggable-id="square1"><span>drop here!</div>
+          <div class="droppable" data-draggable-id="square1"><span>drop here!</div>
+          <div class="droppable" data-draggable-id="square1"><span>drop here!</div>
+          <div class="droppable" data-draggable-id="square1"><span>drop here!</div>
+          <div class="droppable" data-draggable-id="square1"><span>drop here!</div>
+          <div class="droppable" data-draggable-id="square1"><span>drop here!</div>
+          <div class="droppable" data-draggable-id="square1"><span>drop here!</div>
+        </section>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="lineContainer col-md-9">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line lineRightEnd"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">Low notes</div>
+      <div class="col-md-9">
+        <section class="droppable-elements">
+          <div class="droppable" data-draggable-id="square2"><span>drop here!</div>
+          <div class="droppable" data-draggable-id="square2"><span>drop here!</div>
+          <div class="droppable" data-draggable-id="square2"><span>drop here!</div>
+          <div class="droppable" data-draggable-id="square2"><span>drop here!</div>
+          <div class="droppable" data-draggable-id="square2"><span>drop here!</div>
+          <div class="droppable" data-draggable-id="square2"><span>drop here!</div>
+          <div class="droppable" data-draggable-id="square2"><span>drop here!</div>
+          <div class="droppable" data-draggable-id="square2"><span>drop here!</div>
+          <div class="droppable" data-draggable-id="square2"><span>drop here!</div>
+          <div class="droppable" data-draggable-id="square2"><span>drop here!</div>
+          <div class="droppable" data-draggable-id="square2"><span>drop here!</div>
+          <div class="droppable" data-draggable-id="square2"><span>drop here!</div>
+        </section>
+      </div>
+    </div>
 
-<div class="lineContainer">
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line lineRightEnd"></div>
-</div>
-
-<section class="droppable-elements">
-  <div class="droppable" data-draggable-id="square2"><span>drop here!</div>
-  <div class="droppable" data-draggable-id="square2"><span>drop here!</div>
-  <div class="droppable" data-draggable-id="square2"><span>drop here!</div>
-  <div class="droppable" data-draggable-id="square2"><span>drop here!</div>
-  <div class="droppable" data-draggable-id="square2"><span>drop here!</div>
-  <div class="droppable" data-draggable-id="square2"><span>drop here!</div>
-  <div class="droppable" data-draggable-id="square2"><span>drop here!</div>
-  <div class="droppable" data-draggable-id="square2"><span>drop here!</div>
-  <div class="droppable" data-draggable-id="square2"><span>drop here!</div>
-  <div class="droppable" data-draggable-id="square2"><span>drop here!</div>
-  <div class="droppable" data-draggable-id="square2"><span>drop here!</div>
-  <div class="droppable" data-draggable-id="square2"><span>drop here!</div>
-</section>
+  </div>
 
 </body>
-</html>
 
+</html>
