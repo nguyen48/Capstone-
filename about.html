@@ -1,79 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>📋 Line Numbers for Textarea</title>
-    <style>
-      .editor {
-        display: inline-flex;
-        gap: 10px;
-        font-family: monospace;
-        line-height: 21px;
-        background: #282a3a;
-        border-radius: 2px;
-        padding: 20px 10px;
-      }
+<h1>Jane Doe</h1>
+<div class="job-title">Web Developer</div>
+<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
 
-      .line-numbers {
-        width: 20px;
-        text-align: right;
-      }
+<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. </p>
 
-      .line-numbers span {
-        counter-increment:  linenumber;
-      }
-
-      .line-numbers span::before {
-        content: counter(linenumber);
-        display: block;
-        color: #506882;
-      }
-
-      textarea {
-        line-height: 21px;
-        overflow-y: hidden;
-        padding: 0;
-        border: 0;
-        background: #282a3a;
-        color: #FFF;
-        min-width: 500px;
-        outline: none;
-        resize: none;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="editor">
-      <div class="line-numbers">
-        <span></span>
-      </div>
-      <textarea></textarea>
-    </div>
-
-    <script>
-      const textarea = document.querySelector('textarea')
-      const lineNumbers = document.querySelector('.line-numbers')
-
-      textarea.addEventListener('keyup', event => {
-        const numberOfLines = event.target.value.split('\\n').length
-
-        lineNumbers.innerHTML = Array(numberOfLines)
-          .fill('<span></span>')
-          .join('')
-      })
-
-      textarea.addEventListener('keydown', event => {
-        if (event.key === 'Tab') {
-          const start = textarea.selectionStart
-          const end = textarea.selectionEnd
-
-          textarea.value = textarea.value.substring(0, start) + '\\t' + textarea.value.substring(end)
-
-          event.preventDefault()
-        }
-      })
-    </script>
-  </body>
-</html>
+<h2>Contact information</h2>
+<ul>
+    <li>Email: <a href="mailto:jane@example.com">jane@example.com</a></li>
+    <li>Web: <a href="http://example.com">http://example.com</a></li>
+    <li>Tel: 123 45678</li>
+</ul>
