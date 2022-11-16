@@ -25,7 +25,7 @@ div.high {
   position: absolute;
   font-weight: bold;
   top: 350px;
-  left: 100px;
+  left: 180px;
   width: 200px;
   height: 300px;
 }
@@ -33,10 +33,10 @@ div.high {
 div.low {
   position: absolute;
   font-weight: bold;
-  top: 450px;
-  left: 100px;
+  top: 460px;
+  left: 180px;
   width: 200px;
-  height: 100px;
+  height: 90px;
 }
 
 div.instructions1 {
@@ -90,7 +90,7 @@ div.instructions2 {
   align-items: center;
   flex-direction: row;
   text-align: center;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
   background-color: #fff;
   border: 1px dashed #111;
