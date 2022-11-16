@@ -25,7 +25,7 @@ div.high {
   position: absolute;
   font-weight: bold;
   top: 350px;
-  left: 180px;
+  left: 170px;
   width: 200px;
   height: 300px;
 }
@@ -34,7 +34,7 @@ div.low {
   position: absolute;
   font-weight: bold;
   top: 460px;
-  left: 180px;
+  left: 170px;
   width: 200px;
   height: 90px;
 }
