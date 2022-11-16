@@ -1,79 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>📋 Line Numbers for Textarea</title>
-    <style>
-      .editor {
-        display: inline-flex;
-        gap: 10px;
-        font-family: monospace;
-        line-height: 21px;
-        background: #282a3a;
-        border-radius: 2px;
-        padding: 20px 10px;
-      }
+<h1>References</h1>
+<div class="job-title">Background papers</div>
+<p>[1] An, S., Capraro, M. M, & Tillman, D. A. (2013). Elementary Teachers Integrate Music Activities into Regular Mathematics Lessons: Effects on Students’ Mathematical Abilities. Journal for Learning through the Arts, 9(1). http://dx.doi.org/10.21977/D99112867 Retrieved from https://escholarship.org/uc/item/0js732gf </p>
 
-      .line-numbers {
-        width: 20px;
-        text-align: right;
-      }
+<p>[2] Johnson, Amanda. “How I Combined Music and Mathematics in My Elementary Classroom.” Study.Com, https://study.com/blog/how-i-combined-music-and-mathematics-in-my-elementary-classroom.html. Accessed 21 Sept. 2022.</p>
 
-      .line-numbers span {
-        counter-increment:  linenumber;
-      }
+<p>[3] Jennifer Müller, Uwe Oestermeier, and Peter Gerjets. 2017. Multimodal Interaction in
+  Classrooms: Implementation of Tangibles in Integrated Music and Math Lessons. In
+  Proceedings of the 19th ACM International Conference on Multimodal Interaction
+  (ICMI’17). ACM, New York, NY, USA, 2 pages.
+  https://doi.org/10.1145/3136755.3143018 </p>
+  
+<p>[4] Roxana Moreno, and Richard Mayer. 2007. Interactive Multimodal Learning
+  Environments. Educational psychology review 19(3), 309-326. DOI:
+  http//:dx.doi.org/19.1007/s10648-007-9047-2 </p>
+  
+<p>[5] Elizabeth Spelke. 2008. Effects of music instruction on developing cognitive systems
+  at the foundations of mathematics and science. Learning, Arts, and Brain 17.</p>
 
-      .line-numbers span::before {
-        content: counter(linenumber);
-        display: block;
-        color: #506882;
-      }
 
-      textarea {
-        line-height: 21px;
-        overflow-y: hidden;
-        padding: 0;
-        border: 0;
-        background: #282a3a;
-        color: #FFF;
-        min-width: 500px;
-        outline: none;
-        resize: none;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="editor">
-      <div class="line-numbers">
-        <span></span>
-      </div>
-      <textarea></textarea>
-    </div>
-
-    <script>
-      const textarea = document.querySelector('textarea')
-      const lineNumbers = document.querySelector('.line-numbers')
-
-      textarea.addEventListener('keyup', event => {
-        const numberOfLines = event.target.value.split('\\n').length
-
-        lineNumbers.innerHTML = Array(numberOfLines)
-          .fill('<span></span>')
-          .join('')
-      })
-
-      textarea.addEventListener('keydown', event => {
-        if (event.key === 'Tab') {
-          const start = textarea.selectionStart
-          const end = textarea.selectionEnd
-
-          textarea.value = textarea.value.substring(0, start) + '\\t' + textarea.value.substring(end)
-
-          event.preventDefault()
-        }
-      })
-    </script>
-  </body>
-</html>
