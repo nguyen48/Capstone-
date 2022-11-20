@@ -10,6 +10,9 @@
   <script src="https://kit.fontawesome.com/d932b28645.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
   <script src="main.js" defer></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -46,7 +49,13 @@
   <h1 id="myHeader">Welcome to our webpage!</h1>
 
 
-  <img src="https://media.tenor.com/2roX3uxz_68AAAAM/cat-space.gif" style="width:100px;left:40px;height:100px;">
+  <img src="https://media.tenor.com/2roX3uxz_68AAAAM/cat-space.gif" style="width:100px;left:40px;height:100px;"> 
+
+  <p>Play icon on a button:
+    <button type="button" onclick="playAllAudio()" class="btn btn-default btn-sm">
+      <span class="glyphicon glyphicon-play"></span> Play
+    </button>
+  </p>
 
   <div class="container">
     <div class="row">
@@ -70,15 +79,15 @@
       <div class="col-md-2"> HIGH NOTES </div>
       <div class="col-md-9">
         <section class="droppable-elements">
-          <div class="droppable" onmousedown="playAudio()" data-draggable-id="square1"><span>drop here!</div>
-          <div class="droppable" onmousedown="playAudio()" data-draggable-id="square1"><span>drop here!</div>
-          <div class="droppable" onmousedown="playAudio()" data-draggable-id="square1"><span>drop here!</div>
-          <div class="droppable" onmousedown="playAudio()" data-draggable-id="square1"><span>drop here!</div>
-          <div class="droppable" onmousedown="playAudio()" data-draggable-id="square1"><span>drop here!</div>
-          <div class="droppable" onmousedown="playAudio()" data-draggable-id="square1"><span>drop here!</div>
-          <div class="droppable" onmousedown="playAudio()" data-draggable-id="square1"><span>drop here!</div>
-          <div class="droppable" onmousedown="playAudio()" data-draggable-id="square1"><span>drop here!</div>
-          <div class="droppable" onmousedown="playAudio()" data-draggable-id="square1"><span>drop here!</div>
+          <div class="droppable" id="1" onmousedown="playAudio()" data-draggable-id="square1"><span>drop here!</div>
+          <div class="droppable" id="2" onmousedown="playAudio()" data-draggable-id="square1"><span>drop here!</div>
+          <div class="droppable" id="3" onmousedown="playAudio()" data-draggable-id="square1"><span>drop here!</div>
+          <div class="droppable" id="4" onmousedown="playAudio()" data-draggable-id="square1"><span>drop here!</div>
+          <div class="droppable" id="5" onmousedown="playAudio()" data-draggable-id="square1"><span>drop here!</div>
+          <div class="droppable" id="6" onmousedown="playAudio()" data-draggable-id="square1"><span>drop here!</div>
+          <div class="droppable" id="7" onmousedown="playAudio()" data-draggable-id="square1"><span>drop here!</div>
+          <div class="droppable" id="8" onmousedown="playAudio()" data-draggable-id="square1"><span>drop here!</div>
+          <div class="droppable" id="9" onmousedown="playAudio()" data-draggable-id="square1"><span>drop here!</div>
         </section>
       </div>
     </div>
@@ -100,15 +109,15 @@
       <div class="col-md-2"> LOW NOTES </div>
       <div class="col-md-9">
         <section class="droppable-elements">
-          <div class="droppable" onmousedown="playAudio2()" data-draggable-id="square2"><span>drop here!</div>
-          <div class="droppable" onmousedown="playAudio2()" data-draggable-id="square2"><span>drop here!</div>
-          <div class="droppable" onmousedown="playAudio2()" data-draggable-id="square2"><span>drop here!</div>
-          <div class="droppable" onmousedown="playAudio2()" data-draggable-id="square2"><span>drop here!</div>
-          <div class="droppable" onmousedown="playAudio2()" data-draggable-id="square2"><span>drop here!</div>
-          <div class="droppable" onmousedown="playAudio2()" data-draggable-id="square2"><span>drop here!</div>
-          <div class="droppable" onmousedown="playAudio2()" data-draggable-id="square2"><span>drop here!</div>
-          <div class="droppable" onmousedown="playAudio2()" data-draggable-id="square2"><span>drop here!</div>
-          <div class="droppable" onmousedown="playAudio2()" data-draggable-id="square2"><span>drop here!</div>
+          <div class="droppable" id="11" onmousedown="playAudio2()" data-draggable-id="square2"><span>drop here!</div>
+          <div class="droppable" id="12" onmousedown="playAudio2()" data-draggable-id="square2"><span>drop here!</div>
+          <div class="droppable" id="13" onmousedown="playAudio2()" data-draggable-id="square2"><span>drop here!</div>
+          <div class="droppable" id="14" onmousedown="playAudio2()" data-draggable-id="square2"><span>drop here!</div>
+          <div class="droppable" id="15" onmousedown="playAudio2()" data-draggable-id="square2"><span>drop here!</div>
+          <div class="droppable" id="16" onmousedown="playAudio2()" data-draggable-id="square2"><span>drop here!</div>
+          <div class="droppable" id="17" onmousedown="playAudio2()" data-draggable-id="square2"><span>drop here!</div>
+          <div class="droppable" id="18" onmousedown="playAudio2()" data-draggable-id="square2"><span>drop here!</div>
+          <div class="droppable" id="19" onmousedown="playAudio2()" data-draggable-id="square2"><span>drop here!</div>
         </section>
       </div>
     </div>
