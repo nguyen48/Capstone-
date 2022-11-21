@@ -107,7 +107,7 @@ function drop(event) {
     // draggableElement.setAttribute("draggable", "false");
     event.target.insertAdjacentHTML("afterbegin", `<i class ="fas fa-${draggableElementData} " draggable="true"></i>`);
     z[Number(droppableElementId)%10-1]=Math.floor(Number(droppableElementId)/10+1);
-    // console.log(z);
+    console.log(z);
     if(matchingDroppableElement.classList.contains("dropped")) {
       matchingDroppableElement.classList.remove("dropped");
       matchingDroppableElement.style.backgroundColor = "white";
