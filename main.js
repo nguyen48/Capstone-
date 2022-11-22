@@ -35,17 +35,21 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+
 async function playAllAudio() {
   const filteredArray = z.filter(element => element!=0);
   console.log(filteredArray);
-  for (element of filteredArray) {
-    if (element === 1) {
+  for (let i=0; i<filteredArray.length; i++) {
+    if (filteredArray[i] === 1) {
+      console.log(x.duration);
+      // setTimeout(()=>{x.play()}, 2500);
       x.play();
-      await sleep(x.duration);
+      await sleep(x.duration*1000+1000);
     }
-    else if (element === 2) {
+    else if (filteredArray[i] === 2) {
+      console.log(y.duration);
       y.play();
-      await sleep(y.duration);
+      await sleep(y.duration*1000+1000);
     }
   }
   // filteredArray.forEach(
