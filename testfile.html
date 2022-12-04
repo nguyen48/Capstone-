@@ -16,8 +16,8 @@
 
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a HREF="about.html">About</a>
-    <a href="references.html">References</a>
+    <a HREF="#" data-toggle="modal" data-target="#Modal1">About</a>
+    <a HREF="#" data-toggle="modal" data-target="#Modal2">References</a>
   </div>
 
   <span style="font-size:20px; float:left; cursor:pointer" onclick="openNav()">&#9776; Menu</span>
@@ -33,6 +33,70 @@
 </head>
 
 <body>
+  <div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel" style="color: pink;">M&M Project</h5>
+        </div>
+        <div class="modal-body">
+          <div class="job-title">About our project</div>
+          <p>This M & M Project is a simple music activity for kindergarten students. Each high note and low note block
+            sound.</p>
+
+          <p>Students can understand the difference between high and low pitch and also the concept of length by blocks
+            on the number line.</p>
+
+          <h2>Contact information</h2>
+          <ul>
+            <li>Email: <a href="mailto:nguyen48@stolaf.edu">Duy Nguyen</a></li>
+            <li>Web: <a href="mailto: park11@stolaf.edu">Chanjin Park</a></li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel" style="color: pink;">References</h5>
+        </div>
+        <div class="modal-body">
+          <div class="job-title">Background papers</div>
+          <p>[1] An, S., Capraro, M. M, & Tillman, D. A. (2013). Elementary Teachers Integrate Music Activities into
+            Regular Mathematics Lessons: Effects on Students’ Mathematical Abilities. Journal for Learning through the
+            Arts, 9(1). http://dx.doi.org/10.21977/D99112867 Retrieved from https://escholarship.org/uc/item/0js732gf
+          </p>
+
+          <p>[2] Johnson, Amanda. “How I Combined Music and Mathematics in My Elementary Classroom.” Study.Com,
+            https://study.com/blog/how-i-combined-music-and-mathematics-in-my-elementary-classroom.html. Accessed 21
+            Sept. 2022.</p>
+
+          <p>[3] Jennifer Müller, Uwe Oestermeier, and Peter Gerjets. 2017. Multimodal Interaction in
+            Classrooms: Implementation of Tangibles in Integrated Music and Math Lessons. In
+            Proceedings of the 19th ACM International Conference on Multimodal Interaction
+            (ICMI’17). ACM, New York, NY, USA, 2 pages.
+            https://doi.org/10.1145/3136755.3143018 </p>
+
+          <p>[4] Roxana Moreno, and Richard Mayer. 2007. Interactive Multimodal Learning
+            Environments. Educational psychology review 19(3), 309-326. DOI:
+            http//:dx.doi.org/19.1007/s10648-007-9047-2 </p>
+
+          <p>[5] Elizabeth Spelke. 2008. Effects of music instruction on developing cognitive systems
+            at the foundations of mathematics and science. Learning, Arts, and Brain 17.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
@@ -49,7 +113,7 @@
   <h1 id="myHeader">Welcome to our webpage!</h1>
 
 
-  <img src="https://media.tenor.com/2roX3uxz_68AAAAM/cat-space.gif" style="width:100px;left:40px;height:100px;"> 
+  <img src="https://media.tenor.com/2roX3uxz_68AAAAM/cat-space.gif" style="width:100px;left:40px;height:100px;">
 
   <p>Play your melody!:
     <button type="button" onclick="playAllAudio()" class="btn btn-default btn-sm">
@@ -64,10 +128,16 @@
       </div>
       <div class="col-md-8">
         <section class="draggable-elements">
-          <i class="fas fa-square draggable" onmousedown="playAudio()" draggable="true"
-            style="color: #FF00F7; font-size: 3rem;" id="square1"></i>
-          <i class="fas fa-square draggable" onmousedown="playAudio2()" draggable="true"
-            style="color: #D520CF; font-size: 3rem;" id="square2"></i>
+          <div>
+            <div style="display: block;">Quarter</div>
+            <i class="fas fa-square draggable" draggable="true" style="color: #00ff4c; font-size: 3rem; display: block"
+              id="square1"></i>
+          </div>
+          <div>
+            <div style="display: block;">Half</div>
+            <i class="fas fa-square draggable" draggable="true" style="color: #070607; font-size: 3rem; display: block;"
+              id="square2"></i>
+          </div>
         </section>
       </div>
       <div class="col-md-2">
@@ -78,16 +148,16 @@
     <div class="row">
       <div class="col-md-2"> HIGH NOTES </div>
       <div class="col-md-9">
-        <section class="droppable-elements">
-          <div class="droppable" id="1" onmousedown="playAudio()" data-draggable-id="square1"><span>drop here!</div>
-          <div class="droppable" id="2" onmousedown="playAudio()" data-draggable-id="square1"><span>drop here!</div>
-          <div class="droppable" id="3" onmousedown="playAudio()" data-draggable-id="square1"><span>drop here!</div>
-          <div class="droppable" id="4" onmousedown="playAudio()" data-draggable-id="square1"><span>drop here!</div>
-          <div class="droppable" id="5" onmousedown="playAudio()" data-draggable-id="square1"><span>drop here!</div>
-          <div class="droppable" id="6" onmousedown="playAudio()" data-draggable-id="square1"><span>drop here!</div>
-          <div class="droppable" id="7" onmousedown="playAudio()" data-draggable-id="square1"><span>drop here!</div>
-          <div class="droppable" id="8" onmousedown="playAudio()" data-draggable-id="square1"><span>drop here!</div>
-          <div class="droppable" id="9" onmousedown="playAudio()" data-draggable-id="square1"><span>drop here!</div>
+        <section class="droppable-elements" style="justify-content: center;">
+          <div class="droppable" id="1" onmousedown="playAudio()" data-draggable-id="square1"><span>1</div>
+          <div class="droppable" id="2" onmousedown="playAudio()" data-draggable-id="square1"><span>2</div>
+          <div class="droppable" id="3" onmousedown="playAudio()" data-draggable-id="square1"><span>3</div>
+          <div class="droppable" id="4" onmousedown="playAudio()" data-draggable-id="square1"><span>4</div>
+          <div class="droppable" id="5" onmousedown="playAudio()" data-draggable-id="square1"><span>5</div>
+          <div class="droppable" id="6" onmousedown="playAudio()" data-draggable-id="square1"><span>6</div>
+          <div class="droppable" id="7" onmousedown="playAudio()" data-draggable-id="square1"><span>7</div>
+          <div class="droppable" id="8" onmousedown="playAudio()" data-draggable-id="square1"><span>8</div>
+          <div class="droppable" id="9" onmousedown="playAudio()" data-draggable-id="square1"><span>9</div>
         </section>
       </div>
     </div>
@@ -109,15 +179,15 @@
       <div class="col-md-2"> LOW NOTES </div>
       <div class="col-md-9">
         <section class="droppable-elements">
-          <div class="droppable" id="11" onmousedown="playAudio2()" data-draggable-id="square2"><span>drop here!</div>
-          <div class="droppable" id="12" onmousedown="playAudio2()" data-draggable-id="square2"><span>drop here!</div>
-          <div class="droppable" id="13" onmousedown="playAudio2()" data-draggable-id="square2"><span>drop here!</div>
-          <div class="droppable" id="14" onmousedown="playAudio2()" data-draggable-id="square2"><span>drop here!</div>
-          <div class="droppable" id="15" onmousedown="playAudio2()" data-draggable-id="square2"><span>drop here!</div>
-          <div class="droppable" id="16" onmousedown="playAudio2()" data-draggable-id="square2"><span>drop here!</div>
-          <div class="droppable" id="17" onmousedown="playAudio2()" data-draggable-id="square2"><span>drop here!</div>
-          <div class="droppable" id="18" onmousedown="playAudio2()" data-draggable-id="square2"><span>drop here!</div>
-          <div class="droppable" id="19" onmousedown="playAudio2()" data-draggable-id="square2"><span>drop here!</div>
+          <div class="droppable" id="11" onmousedown="playAudio2()" data-draggable-id="square2"><span>1</div>
+          <div class="droppable" id="12" onmousedown="playAudio2()" data-draggable-id="square2"><span>2</div>
+          <div class="droppable" id="13" onmousedown="playAudio2()" data-draggable-id="square2"><span>3</div>
+          <div class="droppable" id="14" onmousedown="playAudio2()" data-draggable-id="square2"><span>4</div>
+          <div class="droppable" id="15" onmousedown="playAudio2()" data-draggable-id="square2"><span>5</div>
+          <div class="droppable" id="16" onmousedown="playAudio2()" data-draggable-id="square2"><span>6</div>
+          <div class="droppable" id="17" onmousedown="playAudio2()" data-draggable-id="square2"><span>7</div>
+          <div class="droppable" id="18" onmousedown="playAudio2()" data-draggable-id="square2"><span>8!</div>
+          <div class="droppable" id="19" onmousedown="playAudio2()" data-draggable-id="square2"><span>9</div>
         </section>
       </div>
     </div>
